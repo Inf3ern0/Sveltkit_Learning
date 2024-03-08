@@ -15,6 +15,13 @@
       "when": 1709898200826,
       "tag": "0001_breezy_victor_mancha",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1709901253539,
+      "tag": "0002_easy_invisible_woman",
+      "breakpoints": true
     }
   ]
 }

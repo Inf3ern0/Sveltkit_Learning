@@ -9,5 +9,6 @@ export const todos = sqliteTable('todos', {
     description: text('description').notNull(),
     status: text('status').default('active').notNull().$type<Status>(),
     completedAt: integer('completed_at', { mode: 'timestamp_ms' }),
-    createdAt: integer('created_at', { mode: 'timestamp' }).default(sql`CURRENT_TIMESTAMP`).notNull(),
+    createdAt: integer('created_at', { mode: 'timestamp_ms' }).default(sql`CURRENT_TIMESTAMP`).notNull(),
+    lastUpdatedAt: integer('last_updated_at', { mode: 'timestamp_ms' }).default(sql`CURRENT_TIMESTAMP`).notNull(),
 });

@@ -14,7 +14,8 @@ export async function updateTodo(id: number, update: { title: string, descriptio
         const [updatedTodo] = await db.update(todos)
             .set({
                 title: update.title,
-                description: update.description
+                description: update.description,
+                lastUpdatedAt: new Date()
             }).where(eq(todos.id, id)).returning();
 
         return {

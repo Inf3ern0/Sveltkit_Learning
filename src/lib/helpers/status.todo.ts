@@ -16,7 +16,8 @@ export async function setStatus(id: number, status: Status) {
         const [todo] = await db.update(todos)
             .set({
                 status,
-                completedAt: status === 'completed' ? new Date() : null
+                completedAt: status === 'completed' ? new Date() : null,
+                lastUpdatedAt: new Date()
             })
             .where(eq(todos.id, id)).returning()
 
