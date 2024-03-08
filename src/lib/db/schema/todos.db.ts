@@ -5,6 +5,7 @@ export const todos = sqliteTable('todos', {
     id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
     title: text('title').notNull(),
     description: text('description').notNull(),
+    status: text('status').default('active').notNull().$type<'active' | 'completed' | 'deleted'>(),
     completedAt: integer('completed_at', { mode: 'timestamp_ms' }),
     createdAt: integer('created_at', { mode: 'timestamp' }).default(sql`CURRENT_TIMESTAMP`).notNull(),
 });
