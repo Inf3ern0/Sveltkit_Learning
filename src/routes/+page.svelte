@@ -34,7 +34,7 @@
     
   </style>
   
-  <h1>Todo List</h1>
+  <h1>TO DO List</h1>
   <input bind:value={newTodo} on:keyup={event => event.key === 'Enter' && addTodo()} placeholder="Add new todo">
   <button on:click={addTodo}>Add</button>
   
