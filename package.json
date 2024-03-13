@@ -35,4 +35,5 @@
 		"@libsql/client": "^0.5.3",
 		"drizzle-orm": "^0.30.0"
 	}
+	
 }
