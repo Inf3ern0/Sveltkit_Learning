@@ -7,3 +7,5 @@ export const todos = sqliteTable('todos', {
     description: text('description').notNull(),
     status: text('status').default('active').notNull().$type<Status>(),
 })
+
+
